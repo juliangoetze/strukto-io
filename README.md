@@ -11,7 +11,6 @@
 * **Nassi-Shneiderman Elements:** Support for standard structogram elements (Sequence, Selection, Iteration, etc.).
 * **Export:** Ability to export diagrams (e.g., as images or PDF - leveraging html2canvas/jsPDF).
 * **Modern Web Tech:** Built with Vue 3, Vite, and TypeScript for a fast and reliable experience.
-* *(Add other key features if applicable, e.g., saving/loading, templates)*
 
 ## 🛠️ Tech Stack
 
@@ -38,7 +37,7 @@ Follow these instructions to set up the development environment and run the proj
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/](https://github.com/)juliangoetze/strukto-io.git
+    git clone https://github.com/juliangoetze/strukto-io.git
     cd strukto-io
     ```
 
@@ -79,8 +78,6 @@ Please report bugs or suggest features by opening an issue on the GitHub reposit
 
 ## 📄 License
 
-This project is licensed under the [Your License Name] License. See the `LICENSE.md` file for details (if available).
+This project is licensed under the MIT License. See the `LICENSE.md` file for details.
 
 ---
-
-*Generated README structure based on standard open-source practices.*
