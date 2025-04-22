@@ -1,0 +1,12 @@
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-regular);
+  background-color: var(--app-background-color);
+  color: var(--color-text-active);
+}
+
+img[data-key='icon'] {
+  height: var(--size-800);
+  width: var(--size-800);
+}

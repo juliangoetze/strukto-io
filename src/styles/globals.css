@@ -1,0 +1,104 @@
+:root {
+  /* global colors */
+  --color-primary-500: 255, 214, 0;
+
+  --color-neutral-100: 255, 255, 255;
+  --color-neutral-130: rgba(255, 255, 255, 0.6);
+  --color-neutral-150: rgba(255, 255, 255, 0.9);
+  --color-neutral-200: 253, 251, 242;
+  --color-neutral-300: 249, 245, 224;
+  --color-neutral-400: 245, 242, 222;
+  --color-neutral-500: 158, 157, 150;
+  --color-neutral-600: 107, 107, 101;
+  --color-neutral-700: 75, 75, 75;
+  --color-neutral-800: 58, 57, 48;
+  --color-neutral-900: 53, 53, 53;
+
+  /* sizes for padding/ margin */
+  --padding-horizontal: clamp(2rem, 5vw, 5rem);
+  --min-width-editor-item: clamp(4rem, 16vw, 14rem);
+  --min-height-editor-item: clamp(5rem, 14vw, 15rem);
+  --min-height-editor-argument: clamp(2rem, 6vh, 6rem);
+  --min-height-editor-childzone: clamp(2rem, 6vh, 6rem);
+  --min-width-block-item: clamp(2rem, 16vw, 6rem);
+  --switch-case-upper-row-height: clamp(2.5rem, 10vw, 12rem);
+  --size-100: 0.5rem;
+  --size-200: 1rem;
+  --size-300: 1.5rem;
+  --size-400: 2rem;
+  --size-500: 2.5rem;
+  --size-600: 3rem;
+  --size-700: 3.5rem;
+  --size-800: 4rem;
+  --size-900: 4.5rem;
+
+  /* font declarations */
+  --ff-primary: 'Fira Mono', monospace;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-200: 0.5rem;
+  --fs-250: 0.6rem;
+  --fs-300: 0.75rem;
+  --fs-350: 0.85rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+  --fs-900: 2.25rem;
+
+  --text-shadow-100: 0px 3px 3px rgba(0, 0, 0, 0.25);
+
+  /* font property mappings */
+  --fs-logo: var(--fs-500);
+
+  --fs-header-nav-item-active: var(--fs-500);
+  --fs-header-nav-item-inactive: var(--fs-400);
+
+  --fs-editor-tool-item: var(--fs-350);
+  --fs-footer-nav: var(--fs-300);
+
+  --fs-editor-canvas-heading: var(--fs-400);
+  --fs-editor-canvas-item: var(--fs-300);
+
+  /* shadows for different layers */
+  --box-shadow-100: 0px 3px 3px 1px rgba(0, 0, 0, 0.25);
+  --box-shadow-200: 0px 5px 6px 2px rgba(0, 0, 0, 0.25);
+  --box-shadow-400: 0px 5px 7px 2px rgba(0, 0, 0, 0.25);
+  --box-shadow-600: 0px 5px 8px 3px rgba(0, 0, 0, 0.25);
+  --box-shadow-800: 0px 5px 10px 4px rgba(0, 0, 0, 0.25);
+
+  /* color property mappings */
+  --color-primary: rgb(var(--color-primary-500));
+  --app-background-color-light: rgb(var(--color-neutral-400));
+  --app-background-color-dark: rgb(var(--color-neutral-900));
+
+  --editor-canvas-background-light: rgb(var(--color-neutral-200));
+  --editor-canvas-background-dark: rgb(var(--color-neutral-700));
+
+  --editor-tool-background-light: rgb(var(--color-neutral-300));
+  --editor-tool-background-dark: rgb(var(--color-neutral-600));
+
+  --color-text-active-light: rgb(var(--color-neutral-900));
+  --color-text-active-dark: rgba(var(--color-neutral-100), 0.9);
+
+  --color-text-inactive-light: rgb(var(--color-neutral-600));
+  --color-text-inactive-dark: rgba(var(--color-neutral-100), 0.6);
+
+  --app-background-color: var(--app-background-color-light);
+  --editor-canvas-background: var(--editor-canvas-background-light);
+  --editor-tool-background: var(--editor-tool-background-light);
+  --color-text-active: var(--color-text-active-light);
+  --color-text-inactive: var(--color-text-inactive-light);
+}
+
+html.dark {
+  --app-background-color: var(--app-background-color-dark);
+  --editor-canvas-background: var(--editor-canvas-background-dark);
+  --editor-tool-background: var(--editor-tool-background-dark);
+  --color-text-active: var(--color-text-active-dark);
+  --color-text-inactive: var(--color-text-inactive-dark);
+}
