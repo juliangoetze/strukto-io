@@ -31,7 +31,7 @@ function resetStruct() {
 function exportStruct() {
   const element = document.getElementById('root-element') as HTMLElement
   html2canvas(element).then((canvas) => {
-    let format = 'p'
+    let format = 'p' as 'p' | 'l'
     if (canvas.width > canvas.height) format = 'l'
     const imgData = canvas.toDataURL('image/png')
     const pdf = new jsPDF(format, 'px', [canvas.width, canvas.height])

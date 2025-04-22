@@ -9,21 +9,19 @@
         class="item-childzone"
         @child-dropped="handleChildDropped"
       />
-      <UseElementSize v-slot="{ width, height }">
-        <div class="argument-container" data-colored="true">
-          <div class="argument-if-display">
-            <SvgLine alignment="left" :width="width / 2" :height="height - 2" type="descending" />
-            <BaseTextInputVue v-model:text="ifStatement" :max-width="`${width / 3 - 2}px`" :editable="false" />
-          </div>
-          <div class="argument">
-            <BaseTextInputVue v-model:text="root.textCondition" class="if-input" :max-width="`${width / 3 - 2}px`" />
-          </div>
-          <div class="argument-else-display">
-            <SvgLine alignment="right" :width="width / 2" :height="height - 2" type="ascending" />
-            <BaseTextInputVue v-model:text="elseStatement" :max-width="`${width / 3 - 2}px`" :editable="false" />
-          </div>
+      <div ref="argumentContainerRef" class="argument-container" data-colored="true">
+        <div class="argument-if-display">
+          <SvgLine alignment="left" :width="width / 2" :height="height - 2" type="descending" />
+          <BaseTextInputVue v-model:text="ifStatement" :max-width="`${width / 3 - 2}px`" :editable="false" />
         </div>
-      </UseElementSize>
+        <div class="argument">
+          <BaseTextInputVue v-model:text="root.textCondition" class="if-input" :max-width="`${width / 3 - 2}px`" />
+        </div>
+        <div class="argument-else-display">
+          <SvgLine alignment="right" :width="width / 2" :height="height - 2" type="ascending" />
+          <BaseTextInputVue v-model:text="elseStatement" :max-width="`${width / 3 - 2}px`" :editable="false" />
+        </div>
+      </div>
       <div class="childzone-container">
         <CanvasItemChildzone
           v-model:root="root.childIf"
@@ -81,7 +79,7 @@
 </template>
 
 <script setup lang="ts">
-import { UseElementSize } from '@vueuse/components'
+import { useElementSize } from '@vueuse/core'
 import { computed, inject, provide, ref } from 'vue'
 
 import BaseTextInputVue from '@/components/BaseTextInput.vue'
@@ -100,6 +98,8 @@ type ChildLocation = 'childAfter' | 'childIf' | 'childElse'
 const props = defineProps<Props>()
 const emit = defineEmits(['update:root', 'child-changed', 'delete-clicked'])
 const store = useGlobalStore()
+const argumentContainerRef = ref(null)
+const { width, height } = useElementSize(argumentContainerRef)
 
 let parents: string[] = inject('parents') || []
 parents = parents.filter((id) => id != props.beforeChildId)

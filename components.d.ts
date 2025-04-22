@@ -29,6 +29,5 @@ declare module 'vue' {
     HeaderNav: typeof import('./src/components/HeaderNav.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     SvgLine: typeof import('./src/components/SvgLine.vue')['default']
-    TheFeedbackButton: typeof import('./src/components/TheFeedbackButton.vue')['default']
   }
 }

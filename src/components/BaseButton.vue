@@ -9,10 +9,9 @@
 
 <script setup lang="ts">
 import { useDark } from '@vueuse/core'
-import { computed, withDefaults } from 'vue'
+import { computed } from 'vue'
 
 import { Icon } from '@iconify/vue'
-import BaseIcon from '@/components/BaseIcon.vue'
 
 const props = withDefaults(defineProps<{ iconName?: string; iconSize?: string }>(), {
   iconName: undefined,

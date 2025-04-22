@@ -23,7 +23,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { computed, defineEmits, nextTick, ref } from 'vue'
+import { computed, nextTick, ref } from 'vue'
 
 import { useGlobalStore } from '@/stores/globalStore'
 

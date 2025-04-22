@@ -10,11 +10,9 @@
         @child-dropped="handleChildDropped"
       />
       <div class="while-item-content">
-        <UseElementSize v-slot="{ width, height }">
-          <div class="item-argument">
-            <BaseTextInput v-model:text="root.textCondition" :max-width="`${width - 2}px`" />
-          </div>
-        </UseElementSize>
+        <div ref="itemArgumentRef" class="item-argument">
+          <BaseTextInput v-model:text="root.textCondition" :max-width="`${width - 2}px`" />
+        </div>
         <CanvasItemChildzone
           v-model:root="root.child"
           :parent-id="root.id"
@@ -53,8 +51,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { UseElementSize } from '@vueuse/components'
-import { computed, inject, provide } from 'vue'
+import { useElementSize } from '@vueuse/core'
+import { computed, inject, provide, ref } from 'vue'
 
 import BaseTextInput from '@/components/BaseTextInput.vue'
 import CanvasGenericChild from '@/components/CanvasGenericChild.vue'
@@ -71,6 +69,8 @@ type ChildLocation = 'childAfter' | 'child'
 const props = defineProps<Props>()
 const emit = defineEmits(['delete-clicked', 'update:root', 'child-changed'])
 const store = useGlobalStore()
+const itemArgumentRef = ref(null)
+const { width } = useElementSize(itemArgumentRef)
 let parents: string[] = inject('parents') || []
 parents = parents.filter((id) => id != props.beforeChildId)
 

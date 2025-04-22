@@ -18,7 +18,6 @@
 * **Framework:** [Vue 3](https://vuejs.org/)
 * **Build Tool:** [Vite](https://vitejs.dev/)
 * **Language:** [TypeScript](https://www.typescriptlang.org/)
-* **UI Library:** [Vant UI](https://vant-ui.github.io/vant/)
 * **State Management:** [Pinia](https://pinia.vuejs.org/)
 * **Utility Library:** [VueUse](https://vueuse.org/)
 * **Styling:** [Sass](https://sass-lang.com/)
